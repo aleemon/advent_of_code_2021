@@ -67,3 +67,21 @@ sum(seq(1:11)) # 11 is the difference between 16 in the input vector and 5, the 
 
 # Go back and figure out code for the example, then expand for the actual input
 
+example_input <- c(16,1,2,0,4,2,7,1,2,14)
+
+example_range <- seq(min(example_input), max(example_input))
+
+function(x) {
+  
+  for (i in seq_along(example_range)) {
+    
+    sum(abs(seq_along(input - example_range[i])))
+    
+  }
+  
+  
+}
+
+lapply(example_input, function(x) {sum(abs(seq_along(x - example_range)))})
+
+
